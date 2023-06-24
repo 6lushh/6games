@@ -1,6 +1,50 @@
 <html>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #333;
+          color: #fff;
+        }
+        /* Set container styles */
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+        /* Set iframe styles */
+        iframe {
+          width: 800px;
+          height: 600px;
+          border: 0;
+          border-radius: 10px; /* Rounded corners */
+          overflow: hidden; /* Hide overflowing content within iframe */
+        }
+        /* Set text box styles */
+        .text-box {
+          width: 800px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 10px;
+          padding: 20px;
+          margin-top: 10px;
+          font-size: 20px;
+          text-align: center;
+          box-shadow: 0px 0px 10px #aaa;
+        }
+        /* Set title styles */
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+      </style>
 <title>Super Mario Bros</title>
 <center>
 <iframe src='https://www.minispelletjes.com/embed/super-mario-bros' style='width:100%;height:100%;' frameborder='0' allowfullscreen></iframe>
 </center>
+<div class="text-box">
+    <div class="title">Super Mario Bros</div>
+  </div>
 </html>
