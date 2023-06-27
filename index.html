@@ -4,6 +4,32 @@
   <head>
     <link rel="stylesheet" href="begin.css">
     <meta http-equiv="refresh" content="60; url=index.html">
+    <script>
+        function checkAccess() {
+            var currentTime = new Date();
+            var startHour = 9;
+            var startMinute = 0;
+            var endHour = 15;
+            var endMinute = 15;
+            
+            var startTime = new Date();
+            startTime.setHours(startHour);
+            startTime.setMinutes(startMinute);
+            
+            var endTime = new Date();
+            endTime.setHours(endHour);
+            endTime.setMinutes(endMinute);
+            
+            if (currentTime < startTime || currentTime > endTime) {
+                // Redirect to a different page
+                window.location.href = "access-denied.html";
+            }
+        }
+
+        window.onload = function() {
+            checkAccess();
+        };
+    </script>
   </head>
   <body>
   <h1>Ublocked Games</h1>
