@@ -24,18 +24,14 @@
                 // Check password
                 var password = prompt("Enter the password to access the site:");
                 if (password !== null && password === "your-password") {
-                    // Password correct, continue to the site
-                    return;
+                    // Password correct, continue to index.html
+                    window.location.href = "index.html";
                 } else {
                     // Incorrect password, redirect to access-denied.html
                     window.location.href = "access-denied.html";
                 }
             }
         }
-
-        window.onload = function() {
-            checkAccess();
-        };
     </script>
   </head>
   <body>
