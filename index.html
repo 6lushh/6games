@@ -7,8 +7,8 @@
     <script>
         function checkAccess() {
             var currentTime = new Date();
-            var startHour = 8;
-            var startMinute = 30;
+            var startHour = 9;
+            var startMinute = 0;
             var endHour = 15;
             var endMinute = 15;
             
@@ -21,8 +21,15 @@
             endTime.setMinutes(endMinute);
             
             if (currentTime < startTime || currentTime > endTime) {
-                // Redirect to a different page
-                window.location.href = "access-denied.html";
+                // Check password
+                var password = prompt("Enter the password to access the site:");
+                if (password !== null && password === "your-password") {
+                    // Password correct, continue to the site
+                    return;
+                } else {
+                    // Incorrect password, redirect to access-denied.html
+                    window.location.href = "access-denied.html";
+                }
             }
         }
 
